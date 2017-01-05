@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MinimalNpmApp" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Index page</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+<link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+<link rel="stylesheet" href="bower_components/bootstrap-select/dist/css/bootstrap-select.min.css">
+<link rel="stylesheet" href="bower_components/vis/dist/vis.css"/>
+<link rel="stylesheet" href="app.css">
+<link rel="stylesheet" href="css_preloaders.css">
+<link rel="stylesheet" href="home/print.css">
+<link rel="stylesheet" href="home/time-line-comp.css">
+<link rel="stylesheet" href="bower_components/angular-datatables/dist/plugins/bootstrap/datatables.bootstrap.min.css"/>
+
+<script
+    src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+
+     <!--TODO : these should be assembled in build stage-->
+
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/datatables/media/js/jquery.dataTables.js"></script>
+    <script src="bower_components/angular-datatables/dist/angular-datatables.js"></script>
+    <script src="bower_components/angular-datatables/dist/plugins/bootstrap/angular-datatables.bootstrap.js"></script>
+
+
+    <script src="bower_components/vis/dist/vis.js"></script>
+    <script src="bower_components/angular-file-saver/dist/angular-file-saver.bundle.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/ng-idle/angular-idle.js"></script>
+
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+    
+
+    <script src="app.js"></script>
+    <script src="home/home-controller.js"></script>
+
+</head>
+<body>
+
+    <div ng-view class='content'>
+    </div>
+
+</body>
+</html>
