@@ -9,9 +9,9 @@
 				}
 			});
 
-	HomeController.$inject = [ '$scope','$cookies', '$location', '$uibModal', '$http'];
+	HomeController.$inject = [ '$scope', '$location', '$uibModal', '$http'];
 
-	function HomeController($scope, $cookies, $location, $uibModal, $http) {
+	function HomeController($scope, $location, $uibModal, $http) {
 		var ctrl = this;
 		$scope.events = [];
 	}
