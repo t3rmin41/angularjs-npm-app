@@ -1,19 +1,16 @@
-(function() {
+(function(angular) {
 	'use strict';
-	angular.module('MinimalNpmApp').controller('HomeController', HomeController)
-			.directive('hidden', function() {
-				return {
-					link : function(scope, element) {
-						$(element).hide();
-					}
-				}
+	angular.module('minimalNpmApp').controller('HomeController', HomeController);
+
+	HomeController.$inject = [ '$scope', '$location', '$uibModal', 'DataService'];
+
+	function HomeController($scope, $location, $uibModal, DataService) {
+		$scope.readJson = function() {
+			console.log("Read JSON");
+			DataService.load().then(function(response) {
+				console.log(response.data);
 			});
-
-	HomeController.$inject = [ '$scope', '$location', '$uibModal', '$http'];
-
-	function HomeController($scope, $location, $uibModal, $http) {
-		var ctrl = this;
-		$scope.events = [];
+			console.log("JSON loaded");
+		};
 	}
-
-})();
+})(window.angular)
