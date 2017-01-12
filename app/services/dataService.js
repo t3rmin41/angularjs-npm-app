@@ -5,7 +5,7 @@
 
 	function DataService($http) {
 		this.load = function() {
-			return $http({url: "data/cancom_output.json"});
+			return $http({url: "data/data_output.json"});
 		};
 	}
 })(window.angular)
