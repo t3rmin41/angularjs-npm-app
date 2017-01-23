@@ -7,5 +7,13 @@
 		this.load = function() {
 			return $http({url: "data/data_output.json"});
 		};
+		
+		var proxied = this.load; 
+
+		this.load = function() {
+			console.log("Will now load JSON");
+			return proxied();
+		}
+		
 	}
 })(window.angular)
