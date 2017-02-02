@@ -4,13 +4,17 @@
 	DataService.$inject = ['$http'];
 
 	function DataService($http) {
-		this.load = function() {
+		this.loadJson = function() {
 			return $http({url: "data/data_output.json"});
 		};
 		
-		var proxied = this.load; 
+		this.loadCsv = function() {
+			return $http({url: "data/data_output.csv"});
+		};
+		
+		var proxied = this.loadJson; 
 
-		this.load = function() {
+		this.loadJson = function() {
 			console.log("Will now load JSON");
 			return proxied();
 		}

@@ -7,7 +7,7 @@
 	function HomeController($scope, $location, $uibModal, DataService) {
 		$scope.readJson = function() {
 			console.log("Read JSON");
-			DataService.load().then(function(response) {
+			DataService.loadJson().then(function(response) {
 				console.log(response.data);
 			});
 			console.log("JSON loaded");
