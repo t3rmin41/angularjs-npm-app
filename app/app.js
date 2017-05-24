@@ -2,11 +2,16 @@
     'use strict';
     angular.module('minimalNpmApp', ['ngRoute', 'ngFileSaver', 'ngIdle', 'ui.bootstrap', 'datatables', 'datatables.bootstrap'])
             .config(function($routeProvider) {
-                $routeProvider.
-					when('/home', {
+                $routeProvider
+					.when('/home', {
 						controller : 'HomeController',
 						templateUrl : 'home/home-view.html'
-					}).otherwise({
+					})
+					.when('/api', {
+						controller : 'ApiController',
+						templateUrl: 'api/api-view.html'
+					})
+					.otherwise({
 						redirectTo : '/home'
 					});
             });		
